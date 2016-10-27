@@ -1,0 +1,114 @@
+/*
+This file is part of Telegram Desktop,
+the official desktop version of Telegram messaging app, see https://telegram.org
+
+Telegram Desktop is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+It is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+In addition, as a special exception, the copyright holders give permission
+to link the code of portions of this program with the OpenSSL library.
+
+Full license: https://github.com/telegramdesktop/tdesktop/blob/master/LICENSE
+Copyright (c) 2014-2016 John Preston, https://desktop.telegram.org
+*/
+
+using "basic.style";
+
+LabelSimple {
+	font: font;
+	maxWidth: pixels;
+	textFg: color;
+}
+
+defaultLabelSimple: LabelSimple {
+	font: normalFont;
+	maxWidth: 0px;
+	textFg: windowTextFg;
+}
+
+MediaSlider {
+	width: pixels;
+	activeFg: color;
+	inactiveFg: color;
+	disabledActiveFg: color;
+	disabledInactiveFg: color;
+	activeOpacity: double;
+	inactiveOpacity: double;
+	seekSize: size;
+	duration: int;
+}
+
+FilledSlider {
+	fullWidth: pixels;
+	lineWidth: pixels;
+	activeFg: color;
+	inactiveFg: color;
+	disabledFg: color;
+	duration: int;
+}
+
+RoundImageCheckbox {
+	imageRadius: pixels;
+	imageSmallRadius: pixels;
+	selectWidth: pixels;
+	selectFg: color;
+	selectDuration: int;
+	checkBorder: color;
+	checkBg: color;
+	checkRadius: pixels;
+	checkSmallRadius: pixels;
+	checkIcon: icon;
+}
+
+MultiSelectItem {
+	padding: margins;
+	maxWidth: pixels;
+	height: pixels;
+	font: font;
+	textBg: color;
+	textFg: color;
+	textActiveBg: color;
+	textActiveFg: color;
+	deleteFg: color;
+	deleteLeft: pixels;
+	deleteStroke: pixels;
+	duration: int;
+	minScale: double;
+}
+
+MultiSelect {
+	padding: margins;
+	maxHeight: pixels;
+	scroll: flatScroll;
+
+	item: MultiSelectItem;
+	itemSkip: pixels;
+
+	field: InputField;
+	fieldMinWidth: pixels;
+	fieldIcon: icon;
+	fieldIconSkip: pixels;
+	fieldCancel: IconButton;
+	fieldCancelSkip: pixels;
+}
+
+widgetSlideDuration: 200;
+widgetFadeDuration: 200;
+
+discreteSliderHeight: 39px;
+discreteSliderTop: 5px;
+discreteSliderSkip: 3px;
+discreteSliderThickness: 3px;
+discreteSliderActiveFg: #4bb5e7;
+discreteSliderInactiveFg: #e1eaef;
+discreteSliderLabelTop: 17px;
+discreteSliderLabelFont: normalFont;
+discreteSliderLabelFg: #1485c2;
+discreteSliderDuration: 200;
